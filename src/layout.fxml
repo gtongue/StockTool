@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="617.0" prefWidth="1231.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <left>
+      <VBox prefHeight="520.0" prefWidth="259.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="85.0" prefWidth="259.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#addSymbol" prefHeight="59.0" prefWidth="161.0" text="Add New Symbol">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Region prefHeight="56.0" prefWidth="32.0" />
+                  <TextField fx:id="SYMLabel" prefHeight="59.0" prefWidth="125.0" promptText="Enter Symbol">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <Button mnemonicParsing="false" onAction="#addPrice" prefHeight="0.0" prefWidth="239.0" text="Add Price">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button layoutX="20.0" layoutY="65.0" mnemonicParsing="false" onAction="#addSector" prefHeight="0.0" prefWidth="239.0" text="Add Sector">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button layoutX="10.0" layoutY="114.0" mnemonicParsing="false" onAction="#addMarketCap" prefHeight="0.0" prefWidth="239.0" text="Add Market Cap">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button layoutX="10.0" layoutY="114.0" mnemonicParsing="false" onAction="#addPE" prefHeight="0.0" prefWidth="239.0" text="Add PE">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button layoutX="10.0" layoutY="192.0" mnemonicParsing="false" onAction="#addDPS" prefHeight="0.0" prefWidth="239.0" text="Add DPS">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button layoutX="10.0" layoutY="192.0" mnemonicParsing="false" onAction="#addEPS" prefHeight="0.0" prefWidth="239.0" text="Add EPS">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#addFiftyTwoHigh" prefHeight="0.0" prefWidth="239.0" text="Add Fifty-Two Week High">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#addFiftyTwoLow" prefHeight="0.0" prefWidth="239.0" text="Add Fifty-Two Week Low">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <HBox>
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="129.0" text="Price On Date">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <TextField fx:id="SYMLabel1" prefHeight="25.0" prefWidth="156.0" promptText="Date MM/DD/YYYY">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <Button mnemonicParsing="false" prefHeight="0.0" prefWidth="239.0" text="Add Custom Collumn">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox prefHeight="520.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#GenertateFile" prefHeight="85.0" prefWidth="3000.0" text="Generate File">
+               <font>
+                  <Font name="System Bold" size="33.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Label alignment="CENTER" prefHeight="92.0" prefWidth="10000.0" text="Example" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <TableView fx:id="Table" prefHeight="20000.0" prefWidth="615.0" />
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <ProgressBar prefHeight="18.0" prefWidth="20000.0" progress="0.0" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>
